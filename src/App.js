@@ -10,58 +10,58 @@ class Counter extends Component{
   }
 
   increament = () => {
-    if(this.state.countType){
-      if(this.state.count +1 <= 20){
-      this.setState({
-        count: this.state.count + 1
-      })
+      if(this.state.countType){
+        if(this.state.count +1 <= 20){
+        this.setState({
+          count: this.state.count + 1
+        })
+      }
+      else{
+        this.setState({
+          count: this.state.count
+        })
+      }
     }
-    else{
-      this.setState({
-        count: this.state.count
-      })
+      else{
+        if(this.state.count +2 <= 20){
+        this.setState({
+          count: this.state.count + 2
+        })
+      }
+      else{
+        this.setState({
+          count: this.state.count
+        })
+      }
     }
-  }
-  else{
-    if(this.state.count +2 <= 20){
-    this.setState({
-      count: this.state.count + 2
-    })
-  }
-  else{
-    this.setState({
-      count: this.state.count
-    })
-  }
-  }
   }
 
   decreament = () => {
     if(this.state.countType){
       if(this.state.count -1 >= 0){
-      this.setState({
+        this.setState({
         count: this.state.count - 1
-      })
+        })
     }
     else{
-      this.setState({
-        count: this.state.count
-      })
+        this.setState({
+          count: this.state.count
+        })
+      }
+    }
+    else{
+      if(this.state.count -2 >= 0){
+        this.setState({
+        count: this.state.count - 2
+        })
+      }
+      else{
+        this.setState({
+          count: this.state.count
+        })
+      }
     }
   }
-  else{
-    if(this.state.count -2 >= 0){
-    this.setState({
-      count: this.state.count - 2
-    })
-  }
-  else{
-    this.setState({
-      count: this.state.count
-    })
-  }
-  }
-}
   clearCount = () => {
     this.setState({
       count: 0
